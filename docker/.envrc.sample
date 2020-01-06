@@ -1,0 +1,7 @@
+# user id and group id
+export UID=$(id -u)
+export GID=$(id -g)
+
+# latex file and mount path
+export SRCFILE=filename_for_Graduation_thesis.tex
+export MNTDIR=/path/to/.texfile/exsisting/dir
