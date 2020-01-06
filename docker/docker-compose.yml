@@ -1,0 +1,12 @@
+version: '3'
+services:
+    tex_compiler:
+        container_name: latex_auto_compile
+        image: hatobus/latex_compiler
+        user: "$UID:$GID"
+        volumes:
+            # docker-compose upをする際には latex_image の中でコマンドを叩く
+            # 別の部分でdocker-compose upされると正しくコンパイルがされない。
+            - "$MNTDIR:/workdir"
+        command: latexmk -pdf -pvc $SRCFILE
+        
