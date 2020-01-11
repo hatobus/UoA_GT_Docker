@@ -27,7 +27,7 @@ RUN apk add --no-cache perl fontconfig-dev freetype-dev curl && \
 RUN tlmgr info tcolorbox --repository http://mirror.ctan.org/systems/texlive/tlnet/ && \
     tlmgr update --self && \
     tlmgr init-usertree; \
-    tlmgr install newtx fontaxes boondox txfonts helvetic kastrup tex-gyre mweights
+    tlmgr install newtx fontaxes boondox txfonts helvetic kastrup tex-gyre mweights algorithmicx algorithms
 
 WORKDIR /workdir
 
